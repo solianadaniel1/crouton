@@ -13,6 +13,13 @@ class UserUpdate(BaseModel):
     active: bool = True
     temporary_password: bool = False
     last_modified: datetime = datetime.utcnow()
+# class UserUpdate(BaseModel):
+#     email: Optional[str] = None
+#     password: Optional[str] = None
+#     email_validated: Optional[bool] = False
+#     active: Optional[bool] = True
+#     temporary_password: Optional[bool] = False
+#     last_modified: Optional[datetime] = datetime.utcnow()
 
 class UserCreate(UserUpdate):
     id: str
